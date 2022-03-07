@@ -11,3 +11,7 @@ def about(request):
 
 def contact(request):
     return render(request, "contact.html")
+
+
+def trips(request):
+    return render(request, "trips.html")
