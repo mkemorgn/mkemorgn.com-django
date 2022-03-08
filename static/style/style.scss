@@ -10,6 +10,9 @@ $pink: #ffb3b3;
 $pink-invert: #fff;
 // Add a serif family
 $family-serif: "Merriweather", "Georgia", serif;
+$nav-text-color: #000000;
+$navbar-item-hover-color: #616161;
+$navbar-item-active-color: #616161;
 
 // 3. Set the derived variables
 
@@ -39,3 +42,33 @@ $colors: map-merge($colors, $addColors);
 @import "bulma/css/bulma.css";
 
 //add custom stuff here
+nav {
+    width: 100%;
+}
+.navbar-brand {
+    padding-left: 20px;
+}
+#navbar {
+    display: block;
+}
+.navbar-start {
+    display: block;
+    padding-right: 20px;
+    padding-top: 5px;
+}
+.navbar-item {
+    float: right;
+    color: black;
+}
+#nav-item:hover {
+    color: $navbar-item-hover-color;
+}
+#contact {
+    padding-top: 200px;
+}
+#submit-button {
+    background-color: black;
+}
+#submit-button:hover {
+    background-color: $navbar-item-hover-color;
+}

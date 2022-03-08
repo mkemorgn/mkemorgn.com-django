@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 import os
 from pathlib import Path
+import config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -24,12 +25,13 @@ SECRET_KEY = "django-insecure-xnbf&3fgq5#f6!i6ac$shbl^#tqp=%rds3+-mwmzk62ai408n_
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["0.0.0.0"]
+ALLOWED_HOSTS = ["127.0.0.1"]
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    "mkemorgn_web.mkemorgn.apps.MkemorgnConfig",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -71,20 +73,14 @@ WSGI_APPLICATION = "mkemorgn_web.wsgi.application"
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
-
-POSTGRES_HOST = os.environ.get("POSTGRES_HOST", default="")
-POSTGRES_DB = os.environ.get("POSTGRES_DB", default="")
-POSTGRES_USER = os.environ.get("POSTGRES_USER", default="")
-POSTGRES_PASSWORD = os.environ.get("POSTGRES_PASSWORD", default="")
-
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.postgresql",
-        "NAME": POSTGRES_DB,
-        "USER": POSTGRES_USER,
-        "PASSWORD": POSTGRES_PASSWORD,
-        "HOST": POSTGRES_HOST,
-        "PORT": 5432,
+        "ENGINE": "django.db.backends.postgresql_psycopg2",
+        "NAME": config.db_name,
+        "USER": config.db_user,
+        "PASSWORD": config.db_password,
+        "HOST": config.db_host,
+        "PORT": config.db_port,
     }
 }
 

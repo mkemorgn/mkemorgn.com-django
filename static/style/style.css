@@ -1,3 +1,41 @@
 @import "bulma/css/bulma.css";
+nav {
+  width: 100%;
+}
+
+.navbar-brand {
+  padding-left: 20px;
+}
+
+#navbar {
+  display: block;
+}
+
+.navbar-start {
+  display: block;
+  padding-right: 20px;
+  padding-top: 5px;
+}
+
+.navbar-item {
+  float: right;
+  color: black;
+}
+
+#nav-item:hover {
+  color: #616161;
+}
+
+#contact {
+  padding-top: 200px;
+}
+
+#submit-button {
+  background-color: black;
+}
+
+#submit-button:hover {
+  background-color: #616161;
+}
 
 /*# sourceMappingURL=style.css.map */
