@@ -9,12 +9,9 @@
   </div>
   <div class="column">
     <p>
-    My name is Mike and I'd categorize myself as a documentary photographer.  Most of my photos are taken from a 'fly on the wall' perspective, or at least that's what my goal is.  I'd like to take pictures and not disturb the scene.  This includes when I'm taking photos in public and also mosre intimate situations like when I'm with family/ friends.
-    </p>
-    <br>
-    <p>
-    When I'm not making photos I'm most likely tinkering with things on my computer and those projects can be seen on my GitHub page if you're interested in that.
-    </p>
+      {% for about_text in about_page %}
+        {{ about_text }}
+      {% endfor %}
   </div>
 </div>
 {% endblock %}

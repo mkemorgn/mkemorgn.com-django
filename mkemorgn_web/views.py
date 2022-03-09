@@ -1,12 +1,15 @@
 from django.shortcuts import render
 
+from mkemorgn_web.mkemorgn.models import About
+
 
 def index(request):
     return render(request, "index.html")
 
 
 def about(request):
-    return render(request, "about.html")
+    about_page = About.objects.all()
+    return render(request, "about.html", {"about_page": about_page})
 
 
 def contact(request):
