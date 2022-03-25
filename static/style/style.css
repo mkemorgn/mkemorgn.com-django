@@ -163,5 +163,14 @@ li img {
   padding: 10px;
   height: auto;
 }
-
+footer {
+    padding: 1rem !important;
+}
+#social-item {
+  color: black;
+  padding: 5px;
+}
+#social-item:hover {
+  color: #616161;
+}
 /*# sourceMappingURL=style.css.map */
