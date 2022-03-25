@@ -1,6 +1,15 @@
 @import "bulma/css/bulma.css";
+
+@font-face {
+  font-family: 'JetBrainsMono-Medium';
+  src: local('JetBrainsMono-Medium'),
+       url('/static/fonts/ttf/JetBrainsMono-Medium.ttf') format("truetype");
+}
+
 nav {
   width: 100%;
+  font-size: 20px;
+  font-family: JetBrainsMono-Medium;
 }
 
 .navbar-brand {
