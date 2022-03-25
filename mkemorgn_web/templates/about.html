@@ -8,10 +8,11 @@
     <img src="https://mikemorganphotos.s3.us-east-2.amazonaws.com/me/me2.jpg">
   </div>
   <div class="column">
-    <p>
+    <p id="about">
       {% for about_text in about_page %}
         {{ about_text }}
       {% endfor %}
+    </p>
   </div>
 </div>
 {% endblock %}

@@ -1,6 +1,11 @@
 @import "bulma/css/bulma.css";
 
 @font-face {
+  font-family: 'JetBrainsMono-Light';
+  src: local('JetBrainsMono-Light'),
+       url('/static/fonts/ttf/JetBrainsMono-Light.ttf') format("truetype");
+}
+@font-face {
   font-family: 'JetBrainsMono-Medium';
   src: local('JetBrainsMono-Medium'),
        url('/static/fonts/ttf/JetBrainsMono-Medium.ttf') format("truetype");
@@ -8,7 +13,6 @@
 
 nav {
   width: 100%;
-  font-size: 20px;
   font-family: JetBrainsMono-Medium;
 }
 
@@ -35,6 +39,7 @@ nav {
   color: #616161;
 }
 
+
 #contact {
   padding-top: 200px;
 }
@@ -49,11 +54,11 @@ nav {
 
 html {
   box-sizing: border-box;
-  font-size: 62.5%;
+  font-size: 100%;
 }
 
 body {
-  font-family: "Nunito", sans-serif;
+  font-family: JetBrainsMono-Light;
   color: #333;
   font-weight: 300;
   line-height: 1.6;
