@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-from mkemorgn_web.mkemorgn.models import About
+from mkemorgn_web.mkemorgn.models import AboutText, AboutPhoto
 
 
 def index(request):
@@ -8,8 +8,16 @@ def index(request):
 
 
 def about(request):
-    about_page = About.objects.all()
-    return render(request, "about.html", {"about_page": about_page})
+    about_text = AboutText.objects.all()
+    about_photo = AboutPhoto.objects.all()
+    return render(
+        request,
+        "about.html",
+        {
+            "about_text": about_text,
+            "about_photo": about_photo,
+        },
+    )
 
 
 def contact(request):

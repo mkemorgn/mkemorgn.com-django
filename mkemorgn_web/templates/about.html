@@ -5,12 +5,14 @@
 {% block content %}
 <div class="columns" id="about">
   <div class="column">
-    <img src="https://mikemorganphotos.s3.us-east-2.amazonaws.com/me/me2.jpg">
+    {% for url in about_photo %}
+      <img src="{{ url }}">
+    {% endfor %}
   </div>
   <div class="column">
     <p id="about">
-      {% for about_text in about_page %}
-        {{ about_text }}
+      {% for text in about_text %}
+        {{ text }}
       {% endfor %}
     </p>
   </div>
