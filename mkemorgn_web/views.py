@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-from mkemorgn_web.mkemorgn.models import AboutText, AboutPhoto
+from mkemorgn_web.mkemorgn.models import AboutText, AboutPhoto, TripsPhotos
 
 
 def index(request):
@@ -25,4 +25,5 @@ def contact(request):
 
 
 def trips(request):
-    return render(request, "trips.html")
+    trip_photos = TripsPhotos.objects.all()
+    return render(request, "trips.html", {"trip_photos": trip_photos})

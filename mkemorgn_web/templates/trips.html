@@ -11,7 +11,9 @@
     </div>
     <div class="column">
         <div class="box">
-        I'm in a box.
+        {% for url in trip_photos %}
+            <img src={{ url }}>
+        {% endfor %}
         </div>
     </div>
     <div class="column">
