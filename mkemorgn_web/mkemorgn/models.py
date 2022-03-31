@@ -23,6 +23,7 @@ class AboutPhoto(models.Model):
 
 class TripsPhotos(models.Model):
     trips_photo_url = models.TextField(blank=True, null=True)
+    name = models.TextField(blank=True, null=True)
 
     class Meta:
         verbose_name_plural = "Trips Page Photo URLs"

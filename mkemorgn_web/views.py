@@ -25,5 +25,15 @@ def contact(request):
 
 
 def trips(request):
-    trip_photos = TripsPhotos.objects.all()
-    return render(request, "trips.html", {"trip_photos": trip_photos})
+    la = TripsPhotos.objects.get(name="LA")
+    detroit = TripsPhotos.objects.get(name="Detroit")
+    denver = TripsPhotos.objects.get(name="Denver")
+    return render(
+        request,
+        "trips.html",
+        {
+            "la": la,
+            "detroit": detroit,
+            "denver": denver,
+        },
+    )
