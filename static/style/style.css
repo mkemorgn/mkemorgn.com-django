@@ -158,6 +158,9 @@ li {
   vertical-align: top;
 }
 
+#trip-name {
+    text-align: center;
+}
 li img {
   width: auto;
   padding: 10px;

@@ -42,6 +42,18 @@ $colors: map-merge($colors, $addColors);
 @import "bulma/css/bulma.css";
 
 //add custom stuff here
+
+@font-face {
+  font-family: 'JetBrainsMono-Light';
+  src: local('JetBrainsMono-Light'),
+       url('/static/fonts/ttf/JetBrainsMono-Light.ttf') format("truetype");
+}
+@font-face {
+  font-family: 'JetBrainsMono-Medium';
+  src: local('JetBrainsMono-Medium'),
+       url('/static/fonts/ttf/JetBrainsMono-Medium.ttf') format("truetype");
+}
+
 nav {
     width: 100%;
 }
@@ -75,7 +87,7 @@ nav {
 
 html {
   box-sizing: border-box;
-  font-size: 62.5%;
+  font-size: 100%;
 }
 
 body {
@@ -190,4 +202,22 @@ li img {
   width: auto;
   padding: 10px;
   height: auto;
+}
+#trip-name {
+    text-align: center;
+}
+li img {
+  width: auto;
+  padding: 10px;
+  height: auto;
+}
+footer {
+    padding: 1rem !important;
+}
+#social-item {
+  color: black;
+  padding: 5px;
+}
+#social-item:hover {
+  color: #616161;
 }
