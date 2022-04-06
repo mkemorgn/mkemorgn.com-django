@@ -3,18 +3,20 @@
 {% block title %}About{% endblock %}
 
 {% block content %}
-<div class="columns" id="about">
-  <div class="column">
-    {% for url in about_photo %}
-      <img src="{{ url }}">
-    {% endfor %}
-  </div>
-  <div class="column">
-    <p id="about">
-      {% for text in about_text %}
-        {{ text }}
+<div class="container" id="about">
+  <div class="columns">
+    <div class="column">
+      {% for url in about_photo %}
+        <img src="{{ url }}">
       {% endfor %}
-    </p>
+    </div>
+    <div class="column">
+      <p id="about">
+        {% for text in about_text %}
+          {{ text }}
+        {% endfor %}
+      </p>
+    </div>
   </div>
 </div>
 {% endblock %}

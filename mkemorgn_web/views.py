@@ -37,3 +37,15 @@ def trips(request):
             "denver": denver,
         },
     )
+
+
+def detroit2020(request):
+    return render(request, "detroit2020.html")
+
+
+def denver2020(request):
+    return render(request, "denver2020.html")
+
+
+def la2021(request):
+    return render(request, "la2021.html")

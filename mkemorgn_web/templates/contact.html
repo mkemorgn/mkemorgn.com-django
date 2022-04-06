@@ -3,29 +3,32 @@
 {% block title %}Contact{% endblock %}
 
 {% block content %}
-<form name="contact" id="contact">
-  <div class="field">
-    <label class="label">Name</label>
-    <div class="control">
-      <input class="input" type="text" name="name" placeholder="Text input">
+<div class="container">
+  <form name="contact" id="contact">
+    <div class="field">
+      <label class="label">Name</label>
+      <div class="control">
+        <input class="input" type="text" name="name" placeholder="Text input">
+      </div>
     </div>
-  </div>
 
-  <div class="field">
-    <label class="label">Email</label>
-    <input class="input" type="email" name="email" placeholder="Email input">
-  </div>
-
-  <div class="field">
-    <label class="label">Message</label>
-    <div class="control">
-      <textarea class="textarea" name="message" placeholder="Textarea"></textarea>
+    <div class="field">
+      <label class="label">Email</label>
+      <input class="input" type="email" name="email" placeholder="Email input">
     </div>
-  </div>
 
-  <div class="field is-grouped">
-    <div class="control">
-      <button class="button is-link" id="submit-button" type="submit">Submit</button>
+    <div class="field">
+      <label class="label">Message</label>
+      <div class="control">
+        <textarea class="textarea" name="message" placeholder="Textarea"></textarea>
+      </div>
     </div>
-  </div>
-</form>{% endblock %}
+
+    <div class="field is-grouped">
+      <div class="control">
+        <button class="button is-link" id="submit-button" type="submit">Submit</button>
+      </div>
+    </div>
+  </form>
+</div>
+{% endblock %}
