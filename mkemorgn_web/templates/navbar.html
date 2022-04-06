@@ -3,7 +3,7 @@
     <a class="navbar-item" id="nav-item" href="{% url 'index' %}">
         <strong>mkemorgn</strong>
     </a>
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="nav-bar">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbar">
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
@@ -12,16 +12,16 @@
 
   </div>
 
-  <div id="nav-bar" class="navbar-menu">
-    <div class="navbar-start">
-      <a class="navbar-item" id="nav-item" href="{% url 'about' %}">
-        About
+  <div id="navbar" class="navbar-menu">
+    <div class="navbar-end">
+      <a class="navbar-item" id="nav-item" href="{% url 'trips' %}">
+        Trips
       </a>
       <a class="navbar-item" id="nav-item" href="{% url 'contact' %}">
         Contact
       </a>
-      <a class="navbar-item" id="nav-item" href="{% url 'trips' %}">
-        Trips
+      <a class="navbar-item" id="nav-item" href="{% url 'about' %}">
+        About
       </a>
     </div>
   </div>
