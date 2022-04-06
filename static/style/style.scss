@@ -1,47 +1,12 @@
 // 1. Import the initial variables
 @import "bulma/sass/utilities/initial-variables";
 @import "bulma/sass/utilities/functions";
+@import "bulma/sass/utilities/derived-variables";
+@import "bulma/css/bulma.css";
 
-// 2. Set your own initial variables
-// Update blue
-$blue: #72d0eb;
-// Add pink and its invert
-$pink: #ffb3b3;
-$pink-invert: #fff;
-// Add a serif family
-$family-serif: "Merriweather", "Georgia", serif;
 $nav-text-color: #000000;
 $navbar-item-hover-color: #616161;
 $navbar-item-active-color: #616161;
-
-// 3. Set the derived variables
-
-// Use the existing orange as the danger color
-$danger: $orange;
-// Use the new serif family
-$family-primary: $family-serif;
-
-// 4. Setup your Custom Colors
-$linkedin: #0077b5;
-$linkedin-invert: findColorInvert($linkedin);
-$twitter: #55acee;
-$twitter-invert: findColorInvert($twitter);
-$github: #333;
-$github-invert: findColorInvert($github);
-
-// 5. Add new color variables to the color map.
-@import "bulma/sass/utilities/derived-variables";
-$addColors: (
-  "twitter":($twitter, $twitter-invert),
-  "linkedin": ($linkedin, $linkedin-invert),
-  "github": ($github, $github-invert)
-);
-$colors: map-merge($colors, $addColors);
-
-// 6. Import the rest of Bulma
-@import "bulma/css/bulma.css";
-
-//add custom stuff here
 
 @font-face {
   font-family: 'JetBrainsMono-Light';
@@ -56,6 +21,7 @@ $colors: map-merge($colors, $addColors);
 
 nav {
     width: 100%;
+    font-family: JetBrainsMono-Medium;
 }
 .navbar-brand {
     padding-left: 20px;
@@ -75,6 +41,12 @@ nav {
 #nav-item:hover {
     color: $navbar-item-hover-color;
 }
+#gallery{
+    padding-top: 2px;
+}
+#trips {
+    padding: 20px;
+}
 #contact {
     padding-top: 200px;
 }
@@ -91,125 +63,17 @@ html {
 }
 
 body {
-  font-family: "Nunito", sans-serif;
-  color: #333;
-  font-weight: 300;
-  line-height: 1.6;
+    font-family: JetBrainsMono-Light;
+    color: #333;
+    font-weight: 300;
+    line-height: 1.6;
+}
+#about {
+    padding-top: 20px;
 }
 
-.container {
-  width: 60%;
-  margin: 2rem auto;
-}
-
-
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: repeat(8, 5vw);
-    grid-gap: 1.5rem;
-    grid-gap: 1.5rem;
-
-    .gallery__item--1 {
-        grid-column-start: 1;
-        grid-column-end: 3;
-        grid-row-start: 1;
-        grid-row-end: 5;
-    }
-    .gallery__item--2 {
-        grid-column-start: 3;
-        grid-column-end: 6;
-        grid-row-start: 1;
-        grid-row-end: 7;
-    }
-    .gallery__item--3 {
-        grid-column-start: 6;
-        grid-column-end: 9;
-        grid-row-start: 1;
-        grid-row-end: 4;
-    }
-    .gallery__item--4 {
-        grid-column-start: 6;
-        grid-column-end: 9;
-        grid-row-start: 4;
-        grid-row-end: 6;
-    }
-    .gallery__item--5 {
-        grid-column-start: 6;
-        grid-column-end: 9;
-        grid-row-start: 6;
-        grid-row-end: 10;
-    }
-
-    .gallery__item--6 {
-        grid-column-start: 1;
-        grid-column-end: 3;
-        grid-row-start: 5;
-        grid-row-end: 9;
-    }
-
-    .gallery__item--7 {
-        grid-column-start: 3;
-        grid-column-end: 6;
-        grid-row-start: 7;
-        grid-row-end: 10;
-    }
-
-    .gallery__item--8 {
-        grid-column-start: 1;
-        grid-column-end: 3;
-        grid-row-start: 9;
-        grid-row-end: 10;
-    }
-
-    .gallery__item--9 {
-        grid-column-start: 1;
-        grid-column-end: 5;
-        grid-row-start: 10;
-        grid-row-end: 14;
-    }
-
-    .gallery__item--10 {
-        grid-column-start: 5;
-        grid-column-end: 9;
-        grid-row-start: 10;
-        grid-row-end: 14;
-    }
-
-    .gallery__item--11 {
-        grid-column-start: 3;
-        grid-column-end: 7;
-        grid-row-start: 14;
-        grid-row-end: 18;
-    }
-
-        .gallery__image {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-        }
-}
-
-ul {
-    text-align: center;
-}
-li {
-    display: block;
-    vertical-align: top;
-}
-li img {
-  width: auto;
-  padding: 10px;
-  height: auto;
-}
 #trip-name {
     text-align: center;
-}
-li img {
-  width: auto;
-  padding: 10px;
-  height: auto;
 }
 footer {
     padding: 1rem !important;
