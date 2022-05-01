@@ -75,7 +75,7 @@ WSGI_APPLICATION = "mkemorgn_web.wsgi.application"
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.postgresql_psycopg2",
+        "ENGINE": "django.db.backends.mysql",
         "NAME": config.db_name,
         "USER": config.db_user,
         "PASSWORD": config.db_password,
