@@ -30,3 +30,14 @@ class TripsPhotos(models.Model):
 
     def __str__(self):
         return self.trips_photo_url
+
+
+class DetroitPhotos(models.Model):
+    photo_url = models.TextField(blank=True, null=True)
+    name = models.TextField(blank=True, null=True)
+
+    class Meta:
+        verbose_name_plural = "Detroit Photos"
+
+    def __str__(self):
+        return self.photo_url
