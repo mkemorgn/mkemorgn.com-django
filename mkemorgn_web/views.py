@@ -4,7 +4,7 @@ from mkemorgn_web.mkemorgn.models import (
     AboutText,
     AboutPhoto,
     TripsPhotos,
-    DetroitPhotos,
+    Detroit2020Photos,
 )
 
 
@@ -45,20 +45,20 @@ def trips(request):
 
 
 def detroit2020(request):
-    detroit1 = DetroitPhotos.objects.get(name="detroit1")
-    detroit2 = DetroitPhotos.objects.get(name="detroit2")
-    detroit3 = DetroitPhotos.objects.get(name="detroit3")
-    detroit4 = DetroitPhotos.objects.get(name="detroit4")
-    detroit5 = DetroitPhotos.objects.get(name="detroit5")
-    detroit6 = DetroitPhotos.objects.get(name="detroit6")
-    detroit7 = DetroitPhotos.objects.get(name="detroit7")
-    detroit8 = DetroitPhotos.objects.get(name="detroit8")
-    detroit9 = DetroitPhotos.objects.get(name="detroit9")
-    detroit10 = DetroitPhotos.objects.get(name="detroit10")
-    detroit11 = DetroitPhotos.objects.get(name="detroit11")
-    detroit12 = DetroitPhotos.objects.get(name="detroit12")
-    detroit13 = DetroitPhotos.objects.get(name="detroit13")
-    detroit14 = DetroitPhotos.objects.get(name="detroit14")
+    detroit1 = Detroit2020Photos.objects.get(name="detroit1")
+    detroit2 = Detroit2020Photos.objects.get(name="detroit2")
+    detroit3 = Detroit2020Photos.objects.get(name="detroit3")
+    detroit4 = Detroit2020Photos.objects.get(name="detroit4")
+    detroit5 = Detroit2020Photos.objects.get(name="detroit5")
+    detroit6 = Detroit2020Photos.objects.get(name="detroit6")
+    detroit7 = Detroit2020Photos.objects.get(name="detroit7")
+    detroit8 = Detroit2020Photos.objects.get(name="detroit8")
+    detroit9 = Detroit2020Photos.objects.get(name="detroit9")
+    detroit10 = Detroit2020Photos.objects.get(name="detroit10")
+    detroit11 = Detroit2020Photos.objects.get(name="detroit11")
+    detroit12 = Detroit2020Photos.objects.get(name="detroit12")
+    detroit13 = Detroit2020Photos.objects.get(name="detroit13")
+    detroit14 = Detroit2020Photos.objects.get(name="detroit14")
     return render(
         request,
         "detroit2020.html",
