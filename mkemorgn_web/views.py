@@ -5,6 +5,8 @@ from mkemorgn_web.mkemorgn.models import (
     AboutPhoto,
     TripsPhotos,
     Detroit2020Photos,
+    Denver2020Photos,
+    LA2021Photos,
 )
 
 
@@ -30,16 +32,16 @@ def contact(request):
 
 
 def trips(request):
-    la = TripsPhotos.objects.get(name="LA")
-    detroit = TripsPhotos.objects.get(name="Detroit")
-    denver = TripsPhotos.objects.get(name="Denver")
+    la2021 = TripsPhotos.objects.get(name="la2021")
+    detroit2020 = TripsPhotos.objects.get(name="detroit2020")
+    denver2020 = TripsPhotos.objects.get(name="denver2020")
     return render(
         request,
         "trips.html",
         {
-            "la": la,
-            "detroit": detroit,
-            "denver": denver,
+            "la2021": la2021,
+            "detroit2020": detroit2020,
+            "denver2020": denver2020,
         },
     )
 
@@ -82,7 +84,40 @@ def detroit2020(request):
 
 
 def denver2020(request):
-    return render(request, "denver2020.html")
+    denver1 = Denver2020Photos.objects.get(name="denver1")
+    denver2 = Denver2020Photos.objects.get(name="denver2")
+    denver3 = Denver2020Photos.objects.get(name="denver3")
+    denver4 = Denver2020Photos.objects.get(name="denver4")
+    denver5 = Denver2020Photos.objects.get(name="denver5")
+    denver6 = Denver2020Photos.objects.get(name="denver6")
+    denver7 = Denver2020Photos.objects.get(name="denver7")
+    denver8 = Denver2020Photos.objects.get(name="denver8")
+    denver9 = Denver2020Photos.objects.get(name="denver9")
+    denver10 = Denver2020Photos.objects.get(name="denver10")
+    denver11 = Denver2020Photos.objects.get(name="denver11")
+    denver12 = Denver2020Photos.objects.get(name="denver12")
+    denver13 = Denver2020Photos.objects.get(name="denver13")
+    denver14 = Denver2020Photos.objects.get(name="denver14")
+    return render(
+        request,
+        "denver2020.html",
+        {
+            "denver1": denver1,
+            "denver2": denver2,
+            "denver3": denver3,
+            "denver4": denver4,
+            "denver5": denver5,
+            "denver6": denver6,
+            "denver7": denver7,
+            "denver8": denver8,
+            "denver9": denver9,
+            "denver10": denver10,
+            "denver11": denver11,
+            "denver12": denver12,
+            "denver13": denver13,
+            "denver14": denver14,
+        },
+    )
 
 
 def la2021(request):
