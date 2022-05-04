@@ -121,4 +121,33 @@ def denver2020(request):
 
 
 def la2021(request):
-    return render(request, "la2021.html")
+    la1 = LA2021Photos.objects.get(name="la1")
+    la2 = LA2021Photos.objects.get(name="la2")
+    la3 = LA2021Photos.objects.get(name="la3")
+    la4 = LA2021Photos.objects.get(name="la4")
+    la5 = LA2021Photos.objects.get(name="la5")
+    la6 = LA2021Photos.objects.get(name="la6")
+    la7 = LA2021Photos.objects.get(name="la7")
+    la8 = LA2021Photos.objects.get(name="la8")
+    la9 = LA2021Photos.objects.get(name="la9")
+    la10 = LA2021Photos.objects.get(name="la10")
+    la11 = LA2021Photos.objects.get(name="la11")
+    la12 = LA2021Photos.objects.get(name="la12")
+    return render(
+        request,
+        "la2021.html",
+        {
+            "la1": la1,
+            "la2": la2,
+            "la3": la3,
+            "la4": la4,
+            "la5": la5,
+            "la6": la6,
+            "la7": la7,
+            "la8": la8,
+            "la9": la9,
+            "la10": la10,
+            "la11": la11,
+            "la12": la12,
+        },
+    )
