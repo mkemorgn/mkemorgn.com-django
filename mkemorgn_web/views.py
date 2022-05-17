@@ -46,10 +46,6 @@ def about(request):
     )
 
 
-def contact(request):
-    return render(request, "contact.html")
-
-
 def trips(request):
     la2021 = TripsPhotos.objects.get(name="la2021")
     detroit2020 = TripsPhotos.objects.get(name="detroit2020")

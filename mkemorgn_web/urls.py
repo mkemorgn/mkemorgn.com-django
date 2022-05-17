@@ -22,7 +22,6 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("", views.index, name="index"),
     path("about/", views.about, name="about"),
-    path("contact/", views.contact, name="contact"),
     path("trips/", views.trips, name="trips"),
     path("trips/detroit2020", views.detroit2020, name="detroit2020"),
     path("trips/denver2020", views.denver2020, name="denver2020"),
