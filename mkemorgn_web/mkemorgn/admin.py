@@ -1,6 +1,5 @@
 from django.contrib import admin
 from .models import (
-    AboutText,
     AboutPhoto,
     TripsPhotos,
     Detroit2020Photos,
@@ -9,7 +8,6 @@ from .models import (
 )
 
 # Register your models here.
-admin.site.register(AboutText)
 admin.site.register(AboutPhoto)
 admin.site.register(TripsPhotos)
 admin.site.register(Detroit2020Photos)

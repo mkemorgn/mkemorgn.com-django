@@ -1,7 +1,6 @@
 from django.shortcuts import render
 
 from mkemorgn_web.mkemorgn.models import (
-    AboutText,
     AboutPhoto,
     TripsPhotos,
     Detroit2020Photos,
@@ -15,13 +14,11 @@ def index(request):
 
 
 def about(request):
-    about_text = AboutText.objects.all()
     about_photo = AboutPhoto.objects.all()
     return render(
         request,
         "about.html",
         {
-            "about_text": about_text,
             "about_photo": about_photo,
         },
     )
