@@ -1,6 +1,17 @@
 from django.db import models
 
 # Create your models here.
+class IndexPhotos(models.Model):
+    photo_url = models.TextField(blank=True, null=True)
+    name = models.TextField(blank=True, null=True)
+
+    class Meta:
+        verbose_name_plural = "Index Photos"
+
+    def __str__(self):
+        return self.photo_url
+
+
 class AboutPhoto(models.Model):
     about_photo_url = models.TextField(blank=True, null=True)
 

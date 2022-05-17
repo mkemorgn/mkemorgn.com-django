@@ -1,6 +1,7 @@
 from django.shortcuts import render
 
 from mkemorgn_web.mkemorgn.models import (
+    IndexPhotos,
     AboutPhoto,
     TripsPhotos,
     Detroit2020Photos,
@@ -10,7 +11,28 @@ from mkemorgn_web.mkemorgn.models import (
 
 
 def index(request):
-    return render(request, "index.html")
+    one = IndexPhotos.objects.get(name="1")
+    two = IndexPhotos.objects.get(name="2")
+    three = IndexPhotos.objects.get(name="3")
+    four = IndexPhotos.objects.get(name="4")
+    five = IndexPhotos.objects.get(name="5")
+    six = IndexPhotos.objects.get(name="6")
+    seven = IndexPhotos.objects.get(name="7")
+    eight = IndexPhotos.objects.get(name="8")
+    return render(
+        request,
+        "index.html",
+        {
+            "one": one,
+            "two": two,
+            "three": three,
+            "four": four,
+            "five": five,
+            "six": six,
+            "seven": seven,
+            "eight": eight,
+        },
+    )
 
 
 def about(request):
