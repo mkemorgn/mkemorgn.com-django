@@ -1,0 +1,38 @@
+{% extends 'mkemorgn/base.html' %}
+
+{% block title %}Trips{% endblock %}
+
+{% block content %}
+<div class="columns" id="trips">
+    <div class="column">
+        <a href="{% url 'detroit2020' %}">
+            <div class="box">
+                <h1 id="trip-name">
+                    Detroit 2020
+                </h1>
+                <img src={{ detroit2020 }} >
+            </div>
+        </a>
+    </div>
+        <div class="column">
+            <a href="{% url 'denver2020' %}">
+                <div class="box">
+                    <h1 id="trip-name">
+                        Denver 2020
+                    </h1>
+                    <img src={{ denver2020 }}>
+                </div>
+            </a>
+        </div>
+        <div class="column">
+            <a href="{% url 'la2021' %}">
+                <div class="box">
+                    <h1 id="trip-name">
+                        LA 2021
+                    </h1>
+                    <img src={{ la2021 }}>
+                </div>
+            </a>
+        </div>
+</div>
+{% endblock %}
