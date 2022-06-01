@@ -1,6 +1,6 @@
 from django.db import models
 
-# Create your models here.
+
 class IndexPhotos(models.Model):
     photo_url = models.TextField(blank=True, null=True)
     name = models.TextField(blank=True, null=True)

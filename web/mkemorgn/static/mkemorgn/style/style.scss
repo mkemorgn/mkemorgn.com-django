@@ -11,12 +11,12 @@ $navbar-item-active-color: #616161;
 @font-face {
   font-family: 'JetBrainsMono-Light';
   src: local('JetBrainsMono-Light'),
-       url('/static/fonts/ttf/JetBrainsMono-Light.ttf') format("truetype");
+       url('../fonts/ttf/JetBrainsMono-Light.ttf') format("truetype");
 }
 @font-face {
   font-family: 'JetBrainsMono-Medium';
   src: local('JetBrainsMono-Medium'),
-       url('/static/fonts/ttf/JetBrainsMono-Medium.ttf') format("truetype");
+       url('../fonts/ttf/JetBrainsMono-Medium.ttf') format("truetype");
 }
 
 nav {

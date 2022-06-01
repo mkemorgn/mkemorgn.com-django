@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-from mkemorgn_web.mkemorgn.models import (
+from web.mkemorgn.models import (
     IndexPhotos,
     AboutPhoto,
     TripsPhotos,
@@ -21,7 +21,7 @@ def index(request):
     eight = IndexPhotos.objects.get(name="8")
     return render(
         request,
-        "index.html",
+        "mkemorgn/index.html",
         {
             "one": one,
             "two": two,
@@ -39,7 +39,7 @@ def about(request):
     about_photo = AboutPhoto.objects.all()
     return render(
         request,
-        "about.html",
+        "mkemorgn/about.html",
         {
             "about_photo": about_photo,
         },
@@ -52,7 +52,7 @@ def trips(request):
     denver2020 = TripsPhotos.objects.get(name="denver2020")
     return render(
         request,
-        "trips.html",
+        "mkemorgn/trips.html",
         {
             "la2021": la2021,
             "detroit2020": detroit2020,
@@ -78,7 +78,7 @@ def detroit2020(request):
     detroit14 = Detroit2020Photos.objects.get(name="detroit14")
     return render(
         request,
-        "detroit2020.html",
+        "mkemorgn/detroit2020.html",
         {
             "detroit1": detroit1,
             "detroit2": detroit2,
@@ -115,7 +115,7 @@ def denver2020(request):
     denver14 = Denver2020Photos.objects.get(name="denver14")
     return render(
         request,
-        "denver2020.html",
+        "mkemorgn/denver2020.html",
         {
             "denver1": denver1,
             "denver2": denver2,
@@ -150,7 +150,7 @@ def la2021(request):
     la12 = LA2021Photos.objects.get(name="la12")
     return render(
         request,
-        "la2021.html",
+        "mkemorgn/la2021.html",
         {
             "la1": la1,
             "la2": la2,

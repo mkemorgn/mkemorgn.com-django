@@ -5,14 +5,16 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{% block title %}mkemorgn{% endblock %}</title>
-    <link rel="stylesheet" href="/static/style/bulma/bulma.css">
-    <link rel="stylesheet" href="/static/style/style.css" />
-    <link href="/static/lightbox/dist/css/lightbox.css" rel="stylesheet" />
-    <script src="/static/lightbox/dist/js/lightbox-plus-jquery.js"></script>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static "mkemorgn/style/bulma/bulma.css" %}" />
+    <link rel="stylesheet" type="text/css" href="{% static "mkemorgn/style/style.css" %}" />
+    <link rel="stylesheet" type="text/css" href="{% static "mkemorgn/lightbox/dist/css/lightbox.css" %}" />
+    <script src="{% static "mkemorgn/lightbox/dist/css/lightbox.css" %}"></script>
+    <script src="{% static "mkemorgn/lightbox/dist/js/lightbox-plus-jquery.js" %}"></script>
     <script src="https://kit.fontawesome.com/e1a96fa28a.js" crossorigin="anonymous"></script>
   </head>
   <body>
-      {% include 'navbar.html' %}
+      {% include 'mkemorgn/navbar.html' %}
     <main>
         {% block content %}
         {% endblock %}
