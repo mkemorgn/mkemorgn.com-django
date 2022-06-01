@@ -1,3 +1,0 @@
-# Will have all production requrements for deployment
-Django==4.0
-mysqlclient==2.1.0
